@@ -1,0 +1,26 @@
+{
+  "name": "mock-request2",
+  "description": "Request parser",
+  "repository": "meituan/mock-request",
+  "version": "1.1.0",
+  "keywords": [],
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "istanbul": "0",
+    "mocha": "1",
+    "should": "*"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "*",
+    "lodash": "^2.4.1"
+  },
+  "scripts": {
+    "debug": "./node_modules/.bin/mocha --debug-brk --require ./test/init.js --require should test",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+  }
+}

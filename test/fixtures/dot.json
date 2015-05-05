@@ -1,0 +1,4 @@
+{
+    "method": "GET",
+    "uri": "/rest/calendar-services/1.0/tips"
+}
